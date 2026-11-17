@@ -7,7 +7,40 @@
 <header><a href="#" class="brand" aria-label="PEI Grid Forecast home"><span class="brand-symbol">↗</span>PEI GRID<span class="light"> / FORECAST</span></a><span class="header-note">An independent study by Faris Elsabah</span></header>
 <main>
 <div class="intro"><div><p class="eyebrow">PRINCE EDWARD ISLAND · ELECTRICITY DEMAND</p><h1>See the next peak.<br><span>Understand the uncertainty.</span></h1><p class="lede">A day-ahead forecasting study using public PEI load readings and archived weather forecasts. Explore the evidence, then test a load-shifting scenario.</p></div><aside class="study-stamp"><span class="dot"></span> RESEARCH PROTOTYPE<p>Island-wide load, in megawatts.<br>No utility affiliation or grid control.</p><span id="snapshot-stamp"></span></aside></div>
-<nav class="tabs" aria-label="Study views"><button data-tab="forecast" class="active" aria-selected="true">01 &nbsp; Forecast & scenario</button><button data-tab="performance" aria-selected="false">02 &nbsp; Test results</button><button data-tab="method" aria-selected="false">03 &nbsp; Data & method</button></nav>
+<!-- grid-film:start -->
+<style>
+.project-film{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,380px);gap:48px;align-items:center;margin:0 0 38px;padding:28px 36px;border:1px solid var(--line);border-radius:12px;background:#edf1e8}
+.project-film h2{font-size:32px;max-width:430px;margin-bottom:18px}
+.project-film-copy>p{font-size:14px;color:var(--muted);max-width:440px}
+.project-film .film-actions{display:flex;gap:18px;flex-wrap:wrap;margin:23px 0;font-size:12px;font-weight:600}
+.project-film figure{margin:0;min-width:0}
+.project-film video{display:block;width:100%;aspect-ratio:4/5;border-radius:8px;background:#102820;object-fit:contain}
+.project-film figcaption{font-size:10px;color:var(--muted);margin-top:10px}
+.project-film details{font-size:12px;color:var(--muted);max-width:450px;line-height:1.65}
+.project-film summary{cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.project-film details p{margin:12px 0 0}
+@media(max-width:700px){.project-film{grid-template-columns:1fr;gap:23px;padding:22px}.project-film h2{font-size:28px}.project-film figure{width:100%;max-width:380px;margin:auto}.project-film video{max-height:65vh}.project-film .film-actions{margin:18px 0}}
+@media print{.project-film{display:none}}
+</style>
+<section class="project-film" aria-labelledby="film-title">
+  <div class="project-film-copy">
+    <p class="eyebrow">WATCH THE PROJECT FILM · 40 SECONDS</p>
+    <h2 id="film-title">Tomorrow’s demand.<br>A closer look.</h2>
+    <p>A short introduction to the PEI data, the forecast and the questions behind the dashboard.</p>
+    <p id="film-description">The film presents the original 2025 backtest and an illustrative load-shifting scenario. The results below also include the linear comparison and exploratory winter revision.</p>
+    <div class="film-actions"><a href="#study-views">Explore the dashboard ↓</a><a href="/projects__grid__project-film.mp4" download>Download the film ↗</a></div>
+    <details><summary>Read the film’s text summary</summary><p>PEI Grid Forecast uses public electricity-load readings and archived weather to estimate next-day hourly demand. The original model achieved 11.98 MW mean absolute error on 8,400 eligible 2025 hours, 34.1% lower than the strongest of three simple baselines. An interactive scenario shifts assumed flexible consumption while conserving energy. The nominal 90% interval covered 86.9% of eligible observations, and underprediction remains a weakness. This is retrospective educational research, with no utility affiliation, equipment control or measured savings.</p></details>
+  </div>
+  <figure>
+    <video controls playsinline preload="none" width="1080" height="1350" poster="/projects__grid__project-film-poster.jpg" aria-label="PEI Grid Forecast project film" aria-describedby="film-description">
+      <source src="/projects__grid__project-film.mp4" type="video/mp4">
+      <p><a href="/projects__grid__project-film.mp4">Watch or download the 40-second project film.</a></p>
+    </video>
+    <figcaption>Text is shown on screen. Original sound design; no narration. Real dashboard captures and animated project data.</figcaption>
+  </figure>
+</section>
+<!-- grid-film:end -->
+<nav id="study-views" class="tabs" aria-label="Study views"><button data-tab="forecast" class="active" aria-selected="true">01 &nbsp; Forecast & scenario</button><button data-tab="performance" aria-selected="false">02 &nbsp; Test results</button><button data-tab="method" aria-selected="false">03 &nbsp; Data & method</button></nav>
 <section id="forecast" class="view">
 <div class="section-heading"><div><p class="eyebrow">DAILY LOAD PROFILE</p><h2>A forecast you can inspect.</h2></div><label class="date-label">Study day<select id="day-select" aria-label="Select study day"></select></label></div>
 <p class="note" id="day-note"></p>
