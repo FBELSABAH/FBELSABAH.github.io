@@ -1,0 +1,31 @@
+{
+  "completed_at_utc": "2026-11-16T13:40:02.236657+00:00",
+  "elapsed_seconds": 67.691,
+  "protocol_sha256": "5f74a38a25cc62254a43c1a25e30783a7f0a5d67cc69482550a59745582f9a17",
+  "source_manifest": {
+    "electricity.csv": {
+      "url": "https://energy.reinvented.net/archive/index.php",
+      "retrieved_at_utc": "2026-11-13T12:00:50.793627+00:00",
+      "sha256": "882ed32957ed5c8c3eb8266bea31f9bcda5d59c0848d1afc9499aad92486b488",
+      "bytes": 31554681
+    },
+    "electricity_current.json": {
+      "url": "https://energy.reinvented.net/pei-energy/govpeca/get-govpeca-json.php",
+      "retrieved_at_utc": "2026-11-13T12:00:51.963324+00:00",
+      "sha256": "50d74c172e792a78e430688b645720eefe5e96400bbd036c92bea2b62e5e285a",
+      "bytes": 243
+    },
+    "weather.json": {
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=46.2382&longitude=-63.1311&hourly=temperature_2m_previous_day2&models=gfs_seamless&start_date=2021-01-01&end_date=2026-11-15&timezone=GMT",
+      "retrieved_at_utc": "2026-11-13T12:00:52.914798+00:00",
+      "sha256": "9ec73d871b5ba158afbbff25e200e70eff081cb7942b9ed0c40fa99e3bc8661f",
+      "bytes": 1221000
+    }
+  },
+  "feature_sha256": "43ee6e4dc620be5f609d33c6b540ae0a5225e234415915126c62147e486b0954",
+  "prediction_sha256": "711cda2721c26f7d9b76f377dde5f0942b452d8e26c741067756a258d9509ee9",
+  "revision_prediction_sha256": "0e3e83420813e94a3db1aafc4af21160ce46206b053c10620ad3cb451416e372",
+  "evaluation_status": "Post-audit reanalysis; revised method is retrospective, no new untouched holdout",
+  "primary_test": "2025 calendar year",
+  "extension_through": "2026-11-12"
+}

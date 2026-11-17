@@ -1,0 +1,18 @@
+[Start the server with a new test journal]
+$ SET greeting hello PEI
+OK
+$ GET greeting
+VALUE hello PEI
+$ STATS
+KEYS 1
+[Force-stop the server process (SIGKILL)]
+[Restart the server using the same journal]
+$ GET greeting
+VALUE hello PEI
+$ DELETE greeting
+OK
+$ GET greeting
+NOT_FOUND
+$ STATS
+KEYS 0
+[Stop the demonstration server]

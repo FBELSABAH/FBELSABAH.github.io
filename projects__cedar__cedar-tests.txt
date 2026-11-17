@@ -1,0 +1,11 @@
+test_complete_corruption (__main__.Tests.test_complete_corruption) ... ok
+test_exclusive_lock (__main__.Tests.test_exclusive_lock) ... ok
+test_framing_and_invalid_input (__main__.Tests.test_framing_and_invalid_input) ... ok
+test_operations_restart (__main__.Tests.test_operations_restart) ... ok
+test_reference_map (__main__.Tests.test_reference_map) ... ok
+test_torn_tail (__main__.Tests.test_torn_tail) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.088s
+
+OK

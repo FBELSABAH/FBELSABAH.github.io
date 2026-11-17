@@ -1,0 +1,524 @@
+{
+  "cases": {
+    "0": {
+      "100": {
+        "shots": 796,
+        "returned": 796,
+        "syndrome_counts": {
+          "10": 796,
+          "11": 0,
+          "00": 0,
+          "01": 0
+        },
+        "return_probability": 1
+      },
+      "101": {
+        "shots": 370,
+        "returned": 0,
+        "syndrome_counts": {
+          "10": 0,
+          "11": 370,
+          "00": 0,
+          "01": 0
+        },
+        "return_probability": 0
+      },
+      "110": {
+        "shots": 381,
+        "returned": 0,
+        "syndrome_counts": {
+          "10": 0,
+          "11": 0,
+          "00": 0,
+          "01": 381
+        },
+        "return_probability": 0
+      },
+      "111": {
+        "shots": 267,
+        "returned": 0,
+        "syndrome_counts": {
+          "10": 0,
+          "11": 0,
+          "00": 267,
+          "01": 0
+        },
+        "return_probability": 0
+      },
+      "000": {
+        "shots": 4595,
+        "returned": 4595,
+        "syndrome_counts": {
+          "10": 0,
+          "11": 0,
+          "00": 4595,
+          "01": 0
+        },
+        "return_probability": 1
+      },
+      "001": {
+        "shots": 746,
+        "returned": 746,
+        "syndrome_counts": {
+          "10": 0,
+          "11": 0,
+          "00": 0,
+          "01": 746
+        },
+        "return_probability": 1
+      },
+      "010": {
+        "shots": 705,
+        "returned": 705,
+        "syndrome_counts": {
+          "10": 0,
+          "11": 705,
+          "00": 0,
+          "01": 0
+        },
+        "return_probability": 1
+      },
+      "011": {
+        "shots": 357,
+        "returned": 0,
+        "syndrome_counts": {
+          "10": 357,
+          "11": 0,
+          "00": 0,
+          "01": 0
+        },
+        "return_probability": 0
+      }
+    },
+    "1": {
+      "100": {
+        "shots": 689,
+        "returned": 689,
+        "syndrome_counts": {
+          "10": 689,
+          "11": 0,
+          "00": 0,
+          "01": 0
+        },
+        "return_probability": 1
+      },
+      "101": {
+        "shots": 385,
+        "returned": 0,
+        "syndrome_counts": {
+          "10": 0,
+          "11": 385,
+          "00": 0,
+          "01": 0
+        },
+        "return_probability": 0
+      },
+      "110": {
+        "shots": 353,
+        "returned": 0,
+        "syndrome_counts": {
+          "10": 0,
+          "11": 0,
+          "00": 0,
+          "01": 353
+        },
+        "return_probability": 0
+      },
+      "111": {
+        "shots": 316,
+        "returned": 0,
+        "syndrome_counts": {
+          "10": 0,
+          "11": 0,
+          "00": 316,
+          "01": 0
+        },
+        "return_probability": 0
+      },
+      "000": {
+        "shots": 4678,
+        "returned": 4678,
+        "syndrome_counts": {
+          "10": 0,
+          "11": 0,
+          "00": 4678,
+          "01": 0
+        },
+        "return_probability": 1
+      },
+      "001": {
+        "shots": 694,
+        "returned": 694,
+        "syndrome_counts": {
+          "10": 0,
+          "11": 0,
+          "00": 0,
+          "01": 694
+        },
+        "return_probability": 1
+      },
+      "010": {
+        "shots": 723,
+        "returned": 723,
+        "syndrome_counts": {
+          "10": 0,
+          "11": 723,
+          "00": 0,
+          "01": 0
+        },
+        "return_probability": 1
+      },
+      "011": {
+        "shots": 364,
+        "returned": 0,
+        "syndrome_counts": {
+          "10": 364,
+          "11": 0,
+          "00": 0,
+          "01": 0
+        },
+        "return_probability": 0
+      }
+    },
+    "+": {
+      "100": {
+        "shots": 700,
+        "returned": 700,
+        "syndrome_counts": {
+          "10": 700,
+          "11": 0,
+          "00": 0,
+          "01": 0
+        },
+        "return_probability": 1
+      },
+      "101": {
+        "shots": 377,
+        "returned": 377,
+        "syndrome_counts": {
+          "10": 0,
+          "11": 377,
+          "00": 0,
+          "01": 0
+        },
+        "return_probability": 1
+      },
+      "110": {
+        "shots": 384,
+        "returned": 384,
+        "syndrome_counts": {
+          "10": 0,
+          "11": 0,
+          "00": 0,
+          "01": 384
+        },
+        "return_probability": 1
+      },
+      "111": {
+        "shots": 279,
+        "returned": 279,
+        "syndrome_counts": {
+          "10": 0,
+          "11": 0,
+          "00": 279,
+          "01": 0
+        },
+        "return_probability": 1
+      },
+      "000": {
+        "shots": 4566,
+        "returned": 4566,
+        "syndrome_counts": {
+          "10": 0,
+          "11": 0,
+          "00": 4566,
+          "01": 0
+        },
+        "return_probability": 1
+      },
+      "001": {
+        "shots": 734,
+        "returned": 734,
+        "syndrome_counts": {
+          "10": 0,
+          "11": 0,
+          "00": 0,
+          "01": 734
+        },
+        "return_probability": 1
+      },
+      "010": {
+        "shots": 731,
+        "returned": 731,
+        "syndrome_counts": {
+          "10": 0,
+          "11": 731,
+          "00": 0,
+          "01": 0
+        },
+        "return_probability": 1
+      },
+      "011": {
+        "shots": 382,
+        "returned": 382,
+        "syndrome_counts": {
+          "10": 382,
+          "11": 0,
+          "00": 0,
+          "01": 0
+        },
+        "return_probability": 1
+      }
+    },
+    "+i": {
+      "100": {
+        "shots": 684,
+        "returned": 684,
+        "syndrome_counts": {
+          "10": 684,
+          "11": 0,
+          "00": 0,
+          "01": 0
+        },
+        "return_probability": 1
+      },
+      "101": {
+        "shots": 365,
+        "returned": 0,
+        "syndrome_counts": {
+          "10": 0,
+          "11": 365,
+          "00": 0,
+          "01": 0
+        },
+        "return_probability": 0
+      },
+      "110": {
+        "shots": 381,
+        "returned": 0,
+        "syndrome_counts": {
+          "10": 0,
+          "11": 0,
+          "00": 0,
+          "01": 381
+        },
+        "return_probability": 0
+      },
+      "111": {
+        "shots": 285,
+        "returned": 0,
+        "syndrome_counts": {
+          "10": 0,
+          "11": 0,
+          "00": 285,
+          "01": 0
+        },
+        "return_probability": 0
+      },
+      "000": {
+        "shots": 4727,
+        "returned": 4727,
+        "syndrome_counts": {
+          "10": 0,
+          "11": 0,
+          "00": 4727,
+          "01": 0
+        },
+        "return_probability": 1
+      },
+      "001": {
+        "shots": 681,
+        "returned": 681,
+        "syndrome_counts": {
+          "10": 0,
+          "11": 0,
+          "00": 0,
+          "01": 681
+        },
+        "return_probability": 1
+      },
+      "010": {
+        "shots": 724,
+        "returned": 724,
+        "syndrome_counts": {
+          "10": 0,
+          "11": 724,
+          "00": 0,
+          "01": 0
+        },
+        "return_probability": 1
+      },
+      "011": {
+        "shots": 349,
+        "returned": 0,
+        "syndrome_counts": {
+          "10": 349,
+          "11": 0,
+          "00": 0,
+          "01": 0
+        },
+        "return_probability": 0
+      }
+    }
+  },
+  "noise": {
+    "0.0": {
+      "shots": 1971,
+      "bare_errors": 0,
+      "logical_errors": 0,
+      "theory_bare": 0,
+      "theory_logical": 0,
+      "bare_error_rate": 0,
+      "logical_error_rate": 0
+    },
+    "0.1": {
+      "shots": 2064,
+      "bare_errors": 202,
+      "logical_errors": 47,
+      "theory_bare": 0.1,
+      "theory_logical": 0.028000000000000004,
+      "bare_error_rate": 0.09786821705426356,
+      "logical_error_rate": 0.022771317829457363
+    },
+    "0.25": {
+      "shots": 2042,
+      "bare_errors": 551,
+      "logical_errors": 319,
+      "theory_bare": 0.25,
+      "theory_logical": 0.15625,
+      "bare_error_rate": 0.26983349657198824,
+      "logical_error_rate": 0.15621939275220373
+    },
+    "0.5": {
+      "shots": 2140,
+      "bare_errors": 1061,
+      "logical_errors": 1009,
+      "theory_bare": 0.5,
+      "theory_logical": 0.5,
+      "bare_error_rate": 0.4957943925233645,
+      "logical_error_rate": 0.47149532710280373
+    }
+  },
+  "raw_counts": {
+    "00000000010": 2001,
+    "00101001110": 235,
+    "00110101111": 245,
+    "01011100100": 19,
+    "10100111010": 90,
+    "11111011101": 274,
+    "00000000000": 1971,
+    "00101001101": 227,
+    "10010011011": 275,
+    "01011101100": 252,
+    "00110101010": 301,
+    "11100111000": 113,
+    "00000000111": 1534,
+    "00110101001": 293,
+    "10010011101": 233,
+    "11001111111": 259,
+    "00000001101": 268,
+    "00000000110": 1476,
+    "00000000001": 2055,
+    "00000000011": 2103,
+    "00000001001": 874,
+    "01011100101": 19,
+    "00101001011": 270,
+    "00000001000": 839,
+    "10010011111": 242,
+    "00101000110": 184,
+    "00000001110": 256,
+    "00000001011": 818,
+    "10010011000": 318,
+    "01011101000": 86,
+    "11111011011": 101,
+    "11001111100": 246,
+    "11100111111": 253,
+    "10010011100": 304,
+    "00000000100": 1514,
+    "10100110110": 21,
+    "11001111101": 283,
+    "00000000101": 1481,
+    "00101001001": 289,
+    "00110101011": 297,
+    "00110100111": 182,
+    "00110101100": 291,
+    "11100111100": 251,
+    "11100111101": 247,
+    "00000001111": 272,
+    "10111011110": 260,
+    "00000001100": 271,
+    "00000001010": 833,
+    "00110101101": 271,
+    "00101001000": 308,
+    "01011101101": 249,
+    "00110101110": 277,
+    "11100110111": 21,
+    "00101001010": 315,
+    "11111011111": 248,
+    "11100111011": 107,
+    "00110101000": 258,
+    "00101000100": 173,
+    "00110100110": 153,
+    "10010011110": 235,
+    "10001111110": 244,
+    "11111011100": 260,
+    "10111011010": 108,
+    "00110100101": 159,
+    "00101001111": 244,
+    "01011101001": 96,
+    "10010011001": 281,
+    "00101000111": 167,
+    "10010010110": 185,
+    "10010010101": 175,
+    "10010011010": 280,
+    "10010010100": 174,
+    "00011101110": 282,
+    "01011101111": 246,
+    "00101001100": 265,
+    "00101000101": 178,
+    "10001111010": 35,
+    "00011101010": 84,
+    "11100111001": 87,
+    "10010010111": 167,
+    "11111011001": 85,
+    "11111010111": 16,
+    "00110100100": 156,
+    "11111011000": 99,
+    "10111010110": 9,
+    "11100110100": 17,
+    "10100111110": 273,
+    "11001111011": 23,
+    "11111010101": 26,
+    "11001111000": 21,
+    "11001111001": 33,
+    "01011101011": 87,
+    "01011100111": 16,
+    "00011100110": 16,
+    "11111010100": 11,
+    "11100110101": 19,
+    "11001110111": 3
+  },
+  "metadata": {
+    "backend": "basic_simulator",
+    "shots": 32768,
+    "job_count": 1,
+    "circuit_count": 1,
+    "qubits": 13,
+    "classical_bits": 11,
+    "gate_count": 174,
+    "depth": 90,
+    "qiskit_version": "2.5.2",
+    "timestamp_utc": "2026-10-10T23:55:29.264999+00:00",
+    "job_id": "0978a6b6-784b-4293-b4d5-3704dbfde6ad",
+    "correction": "coherent syndrome-controlled; no hardware feed-forward",
+    "measurement": "inverse-preparation return test, not full-state fidelity",
+    "case_control_sampling": "uniform state and p selectors; nonuniform error masks; actual conditional shot counts reported",
+    "noise_curve_sampling": "input |0> only, conditioned on p; approximately shots/16 samples per p",
+    "noise_model": "independent X errors per data qubit; ideal circuit model",
+    "theory_assumption": "otherwise perfect gates and readout; noisy backends can add further errors",
+    "bare_baseline": "separate unprotected memory qubit, paired with data0's injected X error",
+    "comparison_scope": "paired injected noise, different gate overheads; not a hardware-advantage benchmark",
+    "mask_order": "data0,data1,data2",
+    "syndrome_order": "Z0Z1,Z1Z2"
+  }
+}

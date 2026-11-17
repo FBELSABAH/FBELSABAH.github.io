@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="canonical" href="https://fbelsabah.github.io/change.html">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHANGE Program Course</title><meta property="og:title" content="CHANGE Program"><meta property="og:description" content="Turn wellness content into a structured course people can navigate."><meta property="og:image" content="https://fbelsabah.github.io/assets__05-change-program.jpg">
+  <style>
+    :root {
+      --upei-red: #a30d25;
+      --upei-red-deep: #85081c;
+      --upei-gold: #d8ad4b;
+      --ink: #222831;
+      --muted: #667085;
+      --line: #d9dfe7;
+      --soft: #f5f6f8;
+      --card: #ffffff;
+      --shadow: 0 18px 46px rgba(18, 24, 40, 0.08);
+      --radius-shell: 24px;
+      --radius-card: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(163, 13, 37, 0.06), transparent 20%),
+        linear-gradient(180deg, #fbfbfc 0%, #f1f4f7 100%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .shell {
+      width: min(1460px, calc(100vw - 28px));
+      margin: 14px auto;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(193, 201, 211, 0.9);
+      border-radius: var(--radius-shell);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 82px;
+      padding: 0 22px 0 16px;
+      background: rgba(255, 255, 255, 0.97);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .crest {
+      position: relative;
+      width: 54px;
+      height: 62px;
+      border-radius: 10px 10px 18px 18px;
+      overflow: hidden;
+      flex: 0 0 auto;
+      background:
+        linear-gradient(90deg, #7f1221 0 52%, var(--upei-gold) 52% 100%);
+    }
+
+    .crest::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      right: 8px;
+      bottom: 8px;
+      height: 18px;
+      border-radius: 0 0 14px 14px;
+      background: #7b9b2f;
+    }
+
+    .crest::after {
+      content: "";
+      position: absolute;
+      left: 11px;
+      right: 11px;
+      top: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.92);
+    }
+
+    .brand-copy {
+      line-height: 0.96;
+    }
+
+    .brand-copy .uni {
+      display: block;
+      color: #8e3a1d;
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .brand-copy .name {
+      display: block;
+      margin-top: 5px;
+      color: #8e3a1d;
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: -0.05em;
+    }
+
+    .status-pill {
+      padding: 10px 14px;
+      border: 1px solid #ead5da;
+      border-radius: 999px;
+      background: #fff7f8;
+      color: var(--upei-red);
+      font-size: 0.94rem;
+      font-weight: 700;
+    }
+
+    .page {
+      padding: 42px 28px 64px;
+    }
+
+    .page[hidden] {
+      display: none;
+    }
+
+    .heading {
+      margin: 0;
+      font-size: clamp(2.2rem, 4vw, 3.3rem);
+      letter-spacing: -0.06em;
+    }
+
+    .subheading {
+      margin: 12px 0 24px;
+      color: var(--ink);
+      font-size: 1.08rem;
+      font-weight: 700;
+    }
+
+    .divider {
+      height: 1px;
+      margin-bottom: 22px;
+      background: var(--line);
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .control {
+      display: inline-flex;
+      align-items: center;
+      min-height: 48px;
+      padding: 0 16px;
+      border: 1px solid #cfd6df;
+      border-radius: 14px;
+      background: #fff;
+      color: #667085;
+      font-size: 1rem;
+    }
+
+    .search {
+      min-width: min(320px, 100%);
+      justify-content: flex-start;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .course-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 306px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      background: var(--card);
+      transition: transform 160ms ease, box-shadow 160ms ease;
+      cursor: pointer;
+    }
+
+    .course-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 30px rgba(18, 24, 40, 0.1);
+    }
+
+    .cover {
+      height: 146px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cover.change {
+      background:
+        radial-gradient(circle at 18% 22%, rgba(255,255,255,0.18), transparent 18%),
+        radial-gradient(circle at 40% 42%, rgba(255,255,255,0.12), transparent 22%),
+        linear-gradient(135deg, #63aee3 0 24%, #c4eef2 24% 44%, #f6bfd1 44% 62%, #f0d38f 62% 78%, #8fc38f 78% 100%);
+      position: relative;
+    }
+
+    .cover.change::after {
+      content: "CHANGE";
+      position: absolute;
+      left: 18px;
+      bottom: 16px;
+      color: rgba(255, 255, 255, 0.95);
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .cover.placeholder-a {
+      background: repeating-linear-gradient(45deg, #d8e2eb 0 28px, #eef2f6 28px 56px, #c8d2dc 56px 84px);
+    }
+
+    .cover.placeholder-b {
+      background: repeating-linear-gradient(135deg, #d7dce2 0 20px, #eef2f6 20px 40px, #c4ccd6 40px 60px);
+    }
+
+    .card-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      gap: 6px;
+      padding: 18px 16px 16px;
+    }
+
+    .card-title {
+      margin: 0;
+      color: var(--upei-red);
+      font-size: 1.02rem;
+      font-weight: 400;
+      line-height: 1.45;
+    }
+
+    .term {
+      color: #394150;
+      font-size: 0.95rem;
+    }
+
+    .progress-line {
+      margin-top: auto;
+      padding-top: 22px;
+      color: #697586;
+      font-size: 0.95rem;
+    }
+
+    .view-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 340px;
+      gap: 28px;
+    }
+
+    .back-row {
+      margin-bottom: 18px;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 11px 16px;
+      background: #fff;
+      color: #374151;
+      font-weight: 700;
+    }
+
+    .course-title {
+      margin: 0;
+      font-size: clamp(2.1rem, 3.4vw, 3.4rem);
+      letter-spacing: -0.06em;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 14px;
+      margin: 18px 0 26px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+      overflow-x: auto;
+    }
+
+    .tab {
+      padding: 10px 2px;
+      white-space: nowrap;
+      color: var(--upei-red);
+      font-size: 1rem;
+    }
+
+    .tab.active {
+      color: #2e3138;
+      font-weight: 700;
+      border-bottom: 3px solid var(--upei-red);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      gap: 26px;
+      align-items: center;
+      padding: 28px 28px 30px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background:
+        linear-gradient(140deg, rgba(163, 13, 37, 0.03), rgba(255,255,255,0.8)),
+        #fff;
+    }
+
+    .hero h2 {
+      margin: 0 0 12px;
+      color: #8e3a1d;
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
+      letter-spacing: -0.05em;
+    }
+
+    .hero p,
+    .lead,
+    .meta-list,
+    .intro-copy,
+    .sidebar-card p,
+    .module-copy p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .badge {
+      padding: 9px 12px;
+      border-radius: 999px;
+      background: #f7ebee;
+      color: var(--upei-red);
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .hero-illustration {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid #eadce0;
+      background: linear-gradient(180deg, #fffdf8 0%, #f9f0df 100%);
+      display: grid;
+      place-items: center;
+      padding: 18px;
+    }
+
+    .section-block {
+      margin-top: 24px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .section-head {
+      padding: 20px 22px 0;
+    }
+
+    .section-head h3 {
+      margin: 0;
+      font-size: 1.4rem;
+      letter-spacing: -0.03em;
+    }
+
+    .section-body {
+      padding: 18px 22px 22px;
+    }
+
+    .video-frame {
+      position: relative;
+      overflow: hidden;
+      border-radius: 18px;
+      background:
+        linear-gradient(135deg, rgba(163, 13, 37, 0.92), rgba(121, 28, 40, 0.9)),
+        #8f1c2e;
+      min-height: 300px;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      color: #fff;
+    }
+
+    .video-frame::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.18), transparent 24%),
+        radial-gradient(circle at bottom right, rgba(255,255,255,0.1), transparent 26%);
+    }
+
+    .video-copy {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      text-align: center;
+    }
+
+    .video-player {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 980px);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 20px 34px rgba(18, 24, 40, 0.2);
+      background: #000;
+    }
+
+    .video-copy h4 {
+      margin: 18px 0 8px;
+      font-size: 1.5rem;
+      letter-spacing: -0.04em;
+    }
+
+    .play {
+      width: 86px;
+      height: 86px;
+      margin: 0 auto;
+      border: 2px solid rgba(255,255,255,0.6);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .play::before {
+      content: "";
+      margin-left: 6px;
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+      border-left: 22px solid #fff;
+    }
+
+    .video-note {
+      margin-top: 16px;
+      color: rgba(255,255,255,0.86);
+      font-size: 0.95rem;
+    }
+
+    .video-caption {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin-top: 18px;
+      text-align: center;
+    }
+
+    .video-caption h4 {
+      margin: 0 0 8px;
+      font-size: 1.45rem;
+      letter-spacing: -0.04em;
+    }
+
+    .video-caption p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.7;
+    }
+
+    .module-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 14px;
+      color: #2f3640;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .toolbar-btn {
+      border: 1px solid #d7dde6;
+      border-radius: 999px;
+      padding: 10px 16px;
+      background: #fff;
+      color: #374151;
+      font-weight: 700;
+    }
+
+    .module-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .module-item {
+      display: grid;
+      grid-template-columns: 38px minmax(0, 1fr) 28px;
+      gap: 10px;
+      align-items: stretch;
+    }
+
+    .module-number {
+      display: grid;
+      place-items: center;
+      color: #303644;
+      font-size: 1.5rem;
+    }
+
+    .module-box {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      width: 100%;
+      padding: 18px 18px;
+      border-radius: 16px;
+      background: #f2f2f3;
+      border: 1px solid #e7e7ea;
+      text-align: left;
+      transition: background 160ms ease, border-color 160ms ease;
+    }
+
+    .module-box:hover,
+    .module-box:focus-visible {
+      background: #fff7f8;
+      border-color: #e5c2ca;
+      outline: none;
+    }
+
+    .module-box strong {
+      display: block;
+      color: var(--upei-red);
+      font-size: 1.2rem;
+      letter-spacing: -0.03em;
+    }
+
+    .module-box .intro-copy {
+      margin-top: 4px;
+      font-size: 0.96rem;
+    }
+
+    .arrow {
+      color: #8a8f98;
+      font-size: 1.9rem;
+      line-height: 1;
+      transition: transform 160ms ease, color 160ms ease;
+    }
+
+    .target {
+      width: 28px;
+      height: 28px;
+      align-self: center;
+      border: 4px solid var(--upei-red);
+      border-radius: 50%;
+    }
+
+    .module-item.open .arrow {
+      transform: rotate(90deg);
+      color: var(--upei-red);
+    }
+
+    .module-panel {
+      grid-column: 2 / 3;
+      margin-top: -2px;
+      padding: 0 0 2px;
+    }
+
+    .module-content {
+      padding: 22px;
+      border: 1px solid #eadfe2;
+      border-radius: 18px;
+      background: linear-gradient(180deg, #fffdfd 0%, #fff7f8 100%);
+    }
+
+    .module-content h4 {
+      margin: 0 0 10px;
+      color: #2f3640;
+      font-size: 1.16rem;
+      letter-spacing: -0.03em;
+    }
+
+    .module-content p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .lesson-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .lesson-card {
+      padding: 16px;
+      border: 1px solid #ecd6db;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .lesson-card h5 {
+      margin: 0 0 8px;
+      color: var(--upei-red);
+      font-size: 1rem;
+    }
+
+    .lesson-card p {
+      margin: 0;
+      font-size: 0.96rem;
+    }
+
+    .lesson-list {
+      margin: 0;
+      padding-left: 18px;
+      color: #4b5563;
+      line-height: 1.7;
+    }
+
+    .lesson-list li + li {
+      margin-top: 6px;
+    }
+
+    .completion-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 6px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid #ead2d8;
+      color: #7a2435;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .quiz-form {
+      display: grid;
+      gap: 18px;
+    }
+
+    .quiz-question {
+      min-inline-size: 0;
+      padding: 18px;
+      border: 1px solid #e4e7ec;
+      border-radius: 16px;
+      background: #fcfcfd;
+    }
+
+    .quiz-question legend {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      white-space: normal;
+      padding: 0;
+      margin: 0 0 12px;
+      color: #1f2937;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .quiz-option {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 10px 0;
+      color: #4b5563;
+      line-height: 1.6;
+    }
+
+    .quiz-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .quiz-btn {
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 14px;
+      border: 1px solid #d6dce5;
+      background: #fff;
+      color: #374151;
+      font-weight: 700;
+    }
+
+    .quiz-btn.primary {
+      border-color: var(--upei-red);
+      background: var(--upei-red);
+      color: #fff;
+    }
+
+    .quiz-result {
+      min-height: 24px;
+      color: #374151;
+      font-weight: 700;
+    }
+
+    .quiz-feedback {
+      margin-top: 12px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .sidebar {
+      display: grid;
+      gap: 18px;
+      align-content: start;
+    }
+
+    .sidebar-card {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fff;
+    }
+
+    .sidebar-card h3 {
+      margin: 0 0 18px;
+      font-size: 1.15rem;
+    }
+
+    .calendar {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      color: #374151;
+    }
+
+    .calendar th,
+    .calendar td {
+      padding: 8px 2px;
+      font-size: 0.95rem;
+    }
+
+    .today {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--upei-red);
+      color: #fff;
+      margin: 0 auto;
+    }
+
+    .mini-links {
+      display: grid;
+      gap: 8px;
+      margin-top: 14px;
+      color: var(--upei-red);
+    }
+
+    .meta-list {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .footer-note {
+      margin-top: 26px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 1120px) {
+      .course-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .view-shell {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .shell {
+        width: min(100vw - 14px, 100%);
+        margin: 7px auto;
+        border-radius: 18px;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 16px;
+      }
+
+      .page {
+        padding: 28px 16px 40px;
+      }
+
+      .course-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .controls {
+        flex-direction: column;
+      }
+
+      .control,
+      .search {
+        width: 100%;
+      }
+
+      .module-item {
+        grid-template-columns: 1fr;
+      }
+
+      .module-number,
+      .target {
+        display: none;
+      }
+
+      .module-panel {
+        grid-column: auto;
+      }
+
+      .lesson-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body><div style="position:relative;z-index:10;background:#17382d;color:white;padding:14px 24px;font:14px Arial;display:flex;gap:20px;flex-wrap:wrap"><a style="color:white" href="/index.html">← All projects</a><span>Independent course-design prototype. Sample progress and content; not a live UPEI course.</span><a style="color:white" href="https://github.com/FBELSABAH/Change-program-design-sample">Source code ↗</a></div>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand" aria-label="University of Prince Edward Island">
+        <div class="crest" aria-hidden="true"></div>
+        <div class="brand-copy">
+          <span class="uni">University of Prince Edward</span>
+          <span class="name">Island</span>
+        </div>
+      </div>
+      <div class="status-pill">CHANGE Program</div>
+    </header>
+
+    <main class="page" id="dashboard-view">
+      <h1 class="heading">My courses</h1>
+      <div class="subheading">Course overview</div>
+      <div class="divider" aria-hidden="true"></div>
+
+      <section class="controls" aria-label="Course filters">
+        <div class="control">All &#9662;</div>
+        <div class="control search">Search</div>
+        <div class="control">Sort by course name &#9662;</div>
+        <div class="control">Card &#9662;</div>
+      </section>
+
+      <section class="course-grid" aria-label="Course cards">
+        <article class="course-card" id="open-course-card" tabindex="0" role="button" aria-label="Open CHANGE Program course">
+          <div class="cover change" role="img" aria-label="CHANGE Program course card"></div>
+          <div class="card-body">
+            <h2 class="card-title">2026S CHANGE Program: Healthy Lifestyle Foundations</h2>
+            <div class="term">2026S</div>
+            <div class="progress-line">35% complete</div>
+          </div>
+        </article>
+      </section>
+
+    </main>
+
+    <main class="page" id="course-view" hidden>
+      <div class="back-row">
+        <button class="back-btn" type="button" id="back-to-dashboard">&#8592; Back to My Courses</button>
+      </div>
+
+      <div class="view-shell">
+        <section>
+          <h1 class="course-title">2026S CHANGE Program: Healthy Lifestyle Foundations</h1>
+          <p class="lead">
+            A welcoming online course that helps participants build healthy habits, strengthen nutrition knowledge, and stay active with practical support at every step.
+          </p>
+
+          <nav class="tabs" aria-label="Course tabs">
+            <span class="tab active">Course</span>
+            <span class="tab">Participants</span>
+            <span class="tab">Resources</span>
+            <span class="tab">Progress</span>
+          </nav>
+
+          <section class="hero">
+            <div class="hero-illustration" aria-hidden="true">
+              <svg viewBox="0 0 260 260" width="100%" height="100%" aria-hidden="true">
+                <defs>
+                  <linearGradient id="sunrise" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#f8d891" />
+                    <stop offset="100%" stop-color="#f2b8c6" />
+                  </linearGradient>
+                  <linearGradient id="cardGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#fff8ea" />
+                    <stop offset="100%" stop-color="#fff2f4" />
+                  </linearGradient>
+                  <linearGradient id="pathFill" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#fff8ec" />
+                    <stop offset="100%" stop-color="#fff4da" />
+                  </linearGradient>
+                </defs>
+                <rect x="0" y="0" width="260" height="260" rx="26" fill="url(#sunrise)" />
+                <rect x="30" y="32" width="200" height="196" rx="34" fill="url(#cardGlow)" opacity="0.88" />
+                <circle cx="72" cy="71" r="20" fill="#fff1d0" />
+                <circle cx="72" cy="71" r="11" fill="#f3c56e" />
+                <path d="M48 188 C77 145, 115 125, 151 120 C183 116, 203 127, 216 144" fill="none" stroke="#e7c97d" stroke-width="20" stroke-linecap="round" opacity="0.9"/>
+                <path d="M52 188 C82 148, 116 131, 149 126 C177 122, 198 130, 210 145" fill="none" stroke="url(#pathFill)" stroke-width="12" stroke-linecap="round"/>
+                <path d="M118 172 C107 152, 103 137, 105 121 C108 101, 121 90, 139 90 C157 90, 169 100, 172 118 C175 136, 169 154, 156 174" fill="none" stroke="#a4542a" stroke-width="8" stroke-linecap="round"/>
+                <circle cx="139" cy="74" r="18" fill="#8fcde5" />
+                <path d="M123 122 L100 104" fill="none" stroke="#a30d25" stroke-width="8" stroke-linecap="round"/>
+                <path d="M155 122 L177 103" fill="none" stroke="#a30d25" stroke-width="8" stroke-linecap="round"/>
+                <path d="M110 153 L90 182" fill="none" stroke="#a30d25" stroke-width="8" stroke-linecap="round"/>
+                <path d="M151 153 L171 182" fill="none" stroke="#a30d25" stroke-width="8" stroke-linecap="round"/>
+                <path d="M89 98 C75 85, 70 72, 73 58 C84 62, 96 72, 104 88" fill="#7eb16b" opacity="0.96" />
+                <path d="M191 97 C204 84, 209 71, 206 57 C194 61, 183 71, 175 87" fill="#7eb16b" opacity="0.96" />
+                <path d="M79 52 C92 38, 109 33, 126 36" fill="none" stroke="#a30d25" stroke-width="5" stroke-linecap="round"/>
+                <circle cx="193" cy="74" r="10" fill="#f6d27e" />
+                <circle cx="165" cy="50" r="6" fill="#fff6e4" opacity="0.9" />
+              </svg>
+            </div>
+
+            <div>
+              <h2>Welcome to the CHANGE participant course</h2>
+              <p>
+                This course will guide you through practical, supportive steps for building healthy habits, improving nutrition, and staying active at a pace that works for you.
+              </p>
+              <div class="hero-badges">
+                <span class="badge">Healthy habits</span>
+                <span class="badge">Nutrition support</span>
+                <span class="badge">Movement and reflection</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block">
+            <div class="section-head">
+              <h3>Introduction video</h3>
+            </div>
+            <div class="section-body">
+              <div class="video-frame">
+                <video class="video-player" controls preload="metadata">
+                  <source src="https://fbelsabah.github.io/Change-program-design-sample/The_CHANGE_Program.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div class="video-caption">
+                  <h4>Welcome to the CHANGE Program</h4>
+                  <p>
+                    Watch this short introduction to get familiar with the course, the program goals, and what to expect as you move through each module.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block">
+            <div class="section-head">
+              <h3>Course modules</h3>
+            </div>
+            <div class="section-body">
+              <div class="module-toolbar">
+                <button class="toolbar-btn" type="button" id="open-all-modules">Open all</button>
+                <button class="toolbar-btn" type="button" id="close-all-modules">Close all</button>
+              </div>
+
+              <div class="module-list" id="module-list">
+                <article class="module-item">
+                  <div class="module-number">1</div>
+                  <button class="module-box" type="button" data-module-toggle="module-1" aria-expanded="false" aria-controls="module-1">
+                    <div class="arrow">&#8250;</div>
+                    <div class="module-copy">
+                      <strong>Module 1: Welcome to CHANGE</strong>
+                      <div class="intro-copy">Short orientation, how the program works, and what participants can expect from the online course.</div>
+                    </div>
+                  </button>
+                  <div class="target" aria-hidden="true"></div>
+                  <div class="module-panel" id="module-1" hidden>
+                    <div class="module-content">
+                      <h4>Start here</h4>
+                      <p>
+                        This opening module introduces the tone of the program, what support participants can expect, and how to move through the course one step at a time without feeling overwhelmed.
+                      </p>
+                      <div class="lesson-grid">
+                        <section class="lesson-card">
+                          <h5>What you will learn</h5>
+                          <ul class="lesson-list">
+                            <li>How the CHANGE program is organized online.</li>
+                            <li>What a realistic pace looks like over the term.</li>
+                            <li>Where to find support when motivation drops.</li>
+                          </ul>
+                        </section>
+                        <section class="lesson-card">
+                          <h5>Suggested activity</h5>
+                          <p>Write one reason you joined the program and one routine you want to strengthen this month. Keep it simple and personal.</p>
+                        </section>
+                      </div>
+                      <div class="completion-chip">Orientation checkpoint: complete after reading and setting one personal intention.</div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="module-item">
+                  <div class="module-number">2</div>
+                  <button class="module-box" type="button" data-module-toggle="module-2" aria-expanded="false" aria-controls="module-2">
+                    <div class="arrow">&#8250;</div>
+                    <div class="module-copy">
+                      <strong>Module 2: Getting Started with Healthy Habits</strong>
+                      <div class="intro-copy">Small behavior changes, realistic goal-setting, and participant reflection activities.</div>
+                    </div>
+                  </button>
+                  <div class="target" aria-hidden="true"></div>
+                  <div class="module-panel" id="module-2" hidden>
+                    <div class="module-content">
+                      <h4>Build a routine that can actually last</h4>
+                      <p>
+                        Healthy routines work better when they are specific, visible, and manageable. This unit focuses on choosing one or two habits you can repeat consistently instead of trying to change everything at once.
+                      </p>
+                      <div class="lesson-grid">
+                        <section class="lesson-card">
+                          <h5>Key ideas</h5>
+                          <ul class="lesson-list">
+                            <li>Start with a habit that fits your current schedule.</li>
+                            <li>Link new actions to routines you already have.</li>
+                            <li>Track progress with short weekly reflections.</li>
+                          </ul>
+                        </section>
+                        <section class="lesson-card">
+                          <h5>Practice prompt</h5>
+                          <p>Choose one habit for the next seven days, such as walking after lunch or preparing water before bed, and record how often it happened.</p>
+                        </section>
+                      </div>
+                      <div class="completion-chip">Habit checkpoint: identify one weekly goal and one barrier you want to plan around.</div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="module-item">
+                  <div class="module-number">3</div>
+                  <button class="module-box" type="button" data-module-toggle="module-3" aria-expanded="false" aria-controls="module-3">
+                    <div class="arrow">&#8250;</div>
+                    <div class="module-copy">
+                      <strong>Module 3: Nutrition Foundations</strong>
+                      <div class="intro-copy">Printable handouts translated into mobile-friendly lessons, quick tips, and downloadable resources.</div>
+                    </div>
+                  </button>
+                  <div class="target" aria-hidden="true"></div>
+                  <div class="module-panel" id="module-3" hidden>
+                    <div class="module-content">
+                      <h4>Nutrition basics without overwhelm</h4>
+                      <p>
+                        This unit translates nutrition handouts into short digital lessons that focus on balance, planning, and awareness instead of strict rules. Participants can review the material in smaller, easier pieces.
+                      </p>
+                      <div class="lesson-grid">
+                        <section class="lesson-card">
+                          <h5>Focus topics</h5>
+                          <ul class="lesson-list">
+                            <li>Building balanced meals using familiar foods.</li>
+                            <li>Planning snacks that support energy and fullness.</li>
+                            <li>Reading food labels for a few useful cues.</li>
+                          </ul>
+                        </section>
+                        <section class="lesson-card">
+                          <h5>Reflection question</h5>
+                          <p>Which meal is hardest to plan during your week, and what one small change could make it easier next time?</p>
+                        </section>
+                      </div>
+                      <div class="completion-chip">Nutrition checkpoint: review one meal pattern and note one improvement you can repeat.</div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="module-item">
+                  <div class="module-number">4</div>
+                  <button class="module-box" type="button" data-module-toggle="module-4" aria-expanded="false" aria-controls="module-4">
+                    <div class="arrow">&#8250;</div>
+                    <div class="module-copy">
+                      <strong>Module 4: Movement and Exercise Support</strong>
+                      <div class="intro-copy">Exercise guidance, weekly prompts, and progress markers inspired by Moodle activity completion.</div>
+                    </div>
+                  </button>
+                  <div class="target" aria-hidden="true"></div>
+                  <div class="module-panel" id="module-4" hidden>
+                    <div class="module-content">
+                      <h4>Movement that feels supportive, not punishing</h4>
+                      <p>
+                        Participants are encouraged to think about movement as a form of care and consistency. The emphasis is on comfort, confidence, and building a routine that matches current ability and energy.
+                      </p>
+                      <div class="lesson-grid">
+                        <section class="lesson-card">
+                          <h5>Weekly focus</h5>
+                          <ul class="lesson-list">
+                            <li>Choose movement options that feel realistic.</li>
+                            <li>Warm up, pace yourself, and notice recovery.</li>
+                            <li>Celebrate consistency instead of intensity.</li>
+                          </ul>
+                        </section>
+                        <section class="lesson-card">
+                          <h5>Suggested activity</h5>
+                          <p>Schedule two short movement sessions this week and reflect on how your mood or energy changed afterward.</p>
+                        </section>
+                      </div>
+                      <div class="completion-chip">Movement checkpoint: plan two sessions and identify one way to make them easier to maintain.</div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="module-item">
+                  <div class="module-number">5</div>
+                  <button class="module-box" type="button" data-module-toggle="module-5" aria-expanded="false" aria-controls="module-5">
+                    <div class="arrow">&#8250;</div>
+                    <div class="module-copy">
+                      <strong>Module 5: Reflection, Follow-up, and Support</strong>
+                      <div class="intro-copy">Participant check-ins, practical next steps, and links to team support materials.</div>
+                    </div>
+                  </button>
+                  <div class="target" aria-hidden="true"></div>
+                  <div class="module-panel" id="module-5" hidden>
+                    <div class="module-content">
+                      <h4>Look back, adjust, and keep going</h4>
+                      <p>
+                        The final module supports reflection instead of perfection. Participants review what has helped, what has been difficult, and what kind of support or next step would help them continue after the course.
+                      </p>
+                      <div class="lesson-grid">
+                        <section class="lesson-card">
+                          <h5>Closing prompts</h5>
+                          <ul class="lesson-list">
+                            <li>What healthy action felt most sustainable?</li>
+                            <li>What barrier still needs a better plan?</li>
+                            <li>Who or what can support your next step?</li>
+                          </ul>
+                        </section>
+                        <section class="lesson-card">
+                          <h5>Next step</h5>
+                          <p>Create a personal follow-up plan with one nutrition goal, one movement goal, and one reminder to check in with yourself again in two weeks.</p>
+                        </section>
+                      </div>
+                      <div class="completion-chip">Reflection checkpoint: complete the quiz module and write one next-step commitment.</div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="module-item">
+                  <div class="module-number">6</div>
+                  <button class="module-box" type="button" data-module-toggle="module-6" aria-expanded="false" aria-controls="module-6">
+                    <div class="arrow">&#8250;</div>
+                    <div class="module-copy">
+                      <strong>Module 6: Course Check-in Quiz</strong>
+                      <div class="intro-copy">A short knowledge check covering the core ideas from the course modules.</div>
+                    </div>
+                  </button>
+                  <div class="target" aria-hidden="true"></div>
+                  <div class="module-panel" id="module-6" hidden>
+                    <div class="module-content">
+                      <h4>Quick course review</h4>
+                      <p>
+                        Use this short quiz to check your understanding of the course themes: starting small, building balanced routines, keeping movement realistic, and planning your next step.
+                      </p>
+                      <form class="quiz-form" id="course-quiz">
+                        <fieldset class="quiz-question">
+                          <legend>1. What is the best way to begin building a healthy routine in this course?</legend>
+                          <label class="quiz-option"><input type="radio" name="q1" value="a" /> Change every habit at once for faster results.</label>
+                          <label class="quiz-option"><input type="radio" name="q1" value="b" /> Start with one realistic habit you can repeat consistently.</label>
+                          <label class="quiz-option"><input type="radio" name="q1" value="c" /> Wait until your schedule is completely stress-free.</label>
+                        </fieldset>
+
+                        <fieldset class="quiz-question">
+                          <legend>2. Which idea matches the course approach to nutrition?</legend>
+                          <label class="quiz-option"><input type="radio" name="q2" value="a" /> Focus on balance and practical meal planning.</label>
+                          <label class="quiz-option"><input type="radio" name="q2" value="b" /> Remove all favorite foods immediately.</label>
+                          <label class="quiz-option"><input type="radio" name="q2" value="c" /> Skip meals to simplify the week.</label>
+                        </fieldset>
+
+                        <fieldset class="quiz-question">
+                          <legend>3. What is emphasized in the movement module?</legend>
+                          <label class="quiz-option"><input type="radio" name="q3" value="a" /> High intensity is the only sign of progress.</label>
+                          <label class="quiz-option"><input type="radio" name="q3" value="b" /> Movement should feel supportive and realistic.</label>
+                          <label class="quiz-option"><input type="radio" name="q3" value="c" /> You should avoid activity unless you can do a full workout.</label>
+                        </fieldset>
+
+                        <fieldset class="quiz-question">
+                          <legend>4. Why does the final reflection module matter?</legend>
+                          <label class="quiz-option"><input type="radio" name="q4" value="a" /> It helps participants review progress and plan a next step.</label>
+                          <label class="quiz-option"><input type="radio" name="q4" value="b" /> It replaces all earlier course activities.</label>
+                          <label class="quiz-option"><input type="radio" name="q4" value="c" /> It is only there to add more reading.</label>
+                        </fieldset>
+
+                        <div class="quiz-actions">
+                          <button class="quiz-btn primary" type="submit">Submit quiz</button>
+                          <button class="quiz-btn" type="button" id="reset-quiz">Reset</button>
+                          <div class="quiz-result" id="quiz-result" aria-live="polite"></div>
+                        </div>
+                        <div class="quiz-feedback" id="quiz-feedback"></div>
+                      </form>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+        </section>
+
+        <aside class="sidebar">
+          <section class="sidebar-card">
+            <h3>Calendar</h3>
+            <table class="calendar" aria-label="May 2026 calendar">
+              <thead>
+                <tr>
+                  <th>Mon</th>
+                  <th>Tue</th>
+                  <th>Wed</th>
+                  <th>Thu</th>
+                  <th>Fri</th>
+                  <th>Sat</th>
+                  <th>Sun</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>
+                <tr><td><span class="today">4</span></td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+                <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+                <tr><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+                <tr><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td></tr>
+              </tbody>
+            </table>
+            <div class="mini-links">
+              <span>Full calendar</span>
+              <span>Import or export calendars</span>
+            </div>
+          </section>
+
+          <section class="sidebar-card">
+            <h3>Program snapshot</h3>
+            <ul class="meta-list">
+              <li>12-month lifestyle intervention</li>
+              <li>Moodle-style participant experience</li>
+              <li>Nutrition education and exercise support</li>
+              <li>Designed for clarity, accessibility, and engagement</li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const dashboardView = document.getElementById("dashboard-view");
+    const courseView = document.getElementById("course-view");
+    const openCourseCard = document.getElementById("open-course-card");
+    const backToDashboard = document.getElementById("back-to-dashboard");
+    const moduleToggles = document.querySelectorAll("[data-module-toggle]");
+    const openAllModules = document.getElementById("open-all-modules");
+    const closeAllModules = document.getElementById("close-all-modules");
+    const courseQuiz = document.getElementById("course-quiz");
+    const resetQuizButton = document.getElementById("reset-quiz");
+    const quizResult = document.getElementById("quiz-result");
+    const quizFeedback = document.getElementById("quiz-feedback");
+    const quizAnswers = {
+      q1: "b",
+      q2: "a",
+      q3: "b",
+      q4: "a"
+    };
+
+    function showCourseView() {
+      dashboardView.hidden = true;
+      courseView.hidden = false;
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function showDashboardView() {
+      courseView.hidden = true;
+      dashboardView.hidden = false;
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function setModuleState(button, isOpen) {
+      const panelId = button.getAttribute("data-module-toggle");
+      const panel = document.getElementById(panelId);
+      const item = button.closest(".module-item");
+
+      button.setAttribute("aria-expanded", String(isOpen));
+      panel.hidden = !isOpen;
+      item.classList.toggle("open", isOpen);
+    }
+
+    function toggleModule(button) {
+      const isOpen = button.getAttribute("aria-expanded") === "true";
+      setModuleState(button, !isOpen);
+    }
+
+    openCourseCard.addEventListener("click", showCourseView);
+    openCourseCard.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        showCourseView();
+      }
+    });
+
+    backToDashboard.addEventListener("click", showDashboardView);
+
+    moduleToggles.forEach((button) => {
+      button.addEventListener("click", () => toggleModule(button));
+    });
+
+    openAllModules.addEventListener("click", () => {
+      moduleToggles.forEach((button) => setModuleState(button, true));
+    });
+
+    closeAllModules.addEventListener("click", () => {
+      moduleToggles.forEach((button) => setModuleState(button, false));
+    });
+
+    courseQuiz.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(courseQuiz);
+      let score = 0;
+
+      Object.entries(quizAnswers).forEach(([question, answer]) => {
+        if (formData.get(question) === answer) {
+          score += 1;
+        }
+      });
+
+      const total = Object.keys(quizAnswers).length;
+
+      if (score === total) {
+        quizResult.textContent = "Score: " + score + "/" + total + " - Excellent work.";
+        quizFeedback.textContent = "You completed the course check-in with a strong grasp of the core ideas: start small, aim for balance, keep movement realistic, and reflect on next steps.";
+      } else if (score >= 2) {
+        quizResult.textContent = "Score: " + score + "/" + total + " - Nice progress.";
+        quizFeedback.textContent = "You have the main ideas. Review any module that still feels fuzzy, especially around habit-building and reflection, then try the quiz again.";
+      } else {
+        quizResult.textContent = "Score: " + score + "/" + total + " - Keep going.";
+        quizFeedback.textContent = "A quick review will help. Reopen the modules above, skim the key ideas, and resubmit when you feel ready.";
+      }
+    });
+
+    resetQuizButton.addEventListener("click", () => {
+      courseQuiz.reset();
+      quizResult.textContent = "";
+      quizFeedback.textContent = "";
+    });
+  </script>
+</body>
+</html>

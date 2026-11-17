@@ -1,0 +1,61 @@
+{
+  "scenario": "A handout changes without its filename changing, and two fictional sources disagree about a deadline.",
+  "courses": [
+    {
+      "id": "demo-data",
+      "name": "Data Methods",
+      "short": "DATA 101"
+    },
+    {
+      "id": "demo-systems",
+      "name": "Software Systems",
+      "short": "CS 110"
+    }
+  ],
+  "records": [
+    {
+      "id": "handout",
+      "course": "Data Methods",
+      "filename": "week-04-handout.txt",
+      "kind": "Changed",
+      "previous_content": "Exercise 2: Submit a scatterplot and describe the association.",
+      "current_content": "Exercise 2: Submit a scatterplot, describe the association, and discuss one limitation.",
+      "explanation": "Compare content hashes instead of relying on the filename; retain the earlier copy.",
+      "previous_sha256": "5856cf6f495254cb221cac996358c7c1d6c9b2b4dd83b19c46d62c64f539cdc4",
+      "current_sha256": "bd77b76775746395d971244931ef88f8def412bc93d4a07eb4b5ccf46ef22938"
+    },
+    {
+      "id": "notes",
+      "course": "Software Systems",
+      "filename": "week-03-notes.txt",
+      "kind": "Unchanged",
+      "previous_content": "Topics: data structures, hash lookup, collision handling.",
+      "current_content": "Topics: data structures, hash lookup, collision handling.",
+      "explanation": "The bytes are unchanged. Do not create a duplicate version.",
+      "previous_sha256": "26b6e1c1ef1263614f841db8f7c163a45323aaa6da4e4b0a4862b87935733190",
+      "current_sha256": "26b6e1c1ef1263614f841db8f7c163a45323aaa6da4e4b0a4862b87935733190"
+    }
+  ],
+  "conflict": {
+    "title": "Assignment 2",
+    "sources": [
+      {
+        "name": "Fictional course page",
+        "wording": "Assignment 2 is due February 11, 2027 at 5 p.m.",
+        "date": "2027-02-11T17:00:00"
+      },
+      {
+        "name": "Fictional instructor update",
+        "wording": "Assignment 2 has been extended to February 14, 2027 at 5 p.m.",
+        "date": "2027-02-14T17:00:00"
+      }
+    ],
+    "explanation": "Show both source statements for review. These example dates are invented and are not Faris's academic deadlines."
+  },
+  "safe_interactions": [
+    "Inspect old and new handout text",
+    "Compute and compare the fictional records' SHA-256 hashes in the browser",
+    "Review both fictional deadline statements without changing a real calendar"
+  ],
+  "no_external_calls": true
+}

@@ -1,0 +1,62 @@
+{
+  "kind": "recorded execution, not an in-browser C server",
+  "captured_at": "2026-11-17T03:59:44.007323+00:00",
+  "platform": "macOS-15.7.4-arm64-arm-64bit-Mach-O",
+  "source_sha256": "d57eb94dc02dbcb2b835b568332ae45eaee1fe193af7067300b47c301c19d021",
+  "events": [
+    {
+      "kind": "lifecycle",
+      "text": "Start the server with a new test journal"
+    },
+    {
+      "kind": "command",
+      "text": "SET greeting hello PEI",
+      "reply": "OK"
+    },
+    {
+      "kind": "command",
+      "text": "GET greeting",
+      "reply": "VALUE hello PEI"
+    },
+    {
+      "kind": "command",
+      "text": "STATS",
+      "reply": "KEYS 1"
+    },
+    {
+      "kind": "lifecycle",
+      "text": "Force-stop the server process (SIGKILL)"
+    },
+    {
+      "kind": "lifecycle",
+      "text": "Restart the server using the same journal"
+    },
+    {
+      "kind": "command",
+      "text": "GET greeting",
+      "reply": "VALUE hello PEI"
+    },
+    {
+      "kind": "command",
+      "text": "DELETE greeting",
+      "reply": "OK"
+    },
+    {
+      "kind": "command",
+      "text": "GET greeting",
+      "reply": "NOT_FOUND"
+    },
+    {
+      "kind": "command",
+      "text": "STATS",
+      "reply": "KEYS 0"
+    },
+    {
+      "kind": "lifecycle",
+      "text": "Stop the demonstration server"
+    }
+  ],
+  "journal_after_acknowledged_write": "SET greeting hello PEI\n",
+  "all_expected_replies_verified": true,
+  "scope": "single-client loopback demonstration with forced process restart; not a power-loss test or capacity benchmark"
+}
