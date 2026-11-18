@@ -1317,6 +1317,7 @@
       setModuleState(button, !isOpen);
     }
 
+    if (location.hash === "#course") showCourseView();
     openCourseCard.addEventListener("click", showCourseView);
     openCourseCard.addEventListener("keydown", (event) => {
       if (event.key === "Enter" || event.key === " ") {
@@ -1325,7 +1326,10 @@
       }
     });
 
-    backToDashboard.addEventListener("click", showDashboardView);
+    backToDashboard.addEventListener("click", () => {
+      if (location.hash === "#course") history.replaceState(null, "", location.pathname + location.search);
+      showDashboardView();
+    });
 
     moduleToggles.forEach((button) => {
       button.addEventListener("click", () => toggleModule(button));
