@@ -2,27 +2,14 @@
 <html lang="en">
 <head><link rel="canonical" href="https://fbelsabah.github.io/grid.html"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>PEI Grid Forecast | Faris Elsabah</title><meta property="og:title" content="PEI Grid Forecast"><meta property="og:description" content="Forecast tomorrow’s electricity demand. Inspect the errors, not just the headline score."><meta property="og:image" content="https://fbelsabah.github.io/assets__grid.png">
 <meta name="description" content="An auditable study of day-ahead electricity demand on Prince Edward Island, with chronological backtests and a load-shifting simulator.">
-<link rel="stylesheet" href="/projects__grid__style.css"><script src="/projects__grid__data.js" defer></script><script src="/projects__grid__app.js" defer></script></head>
+<link rel="stylesheet" href="/projects__grid__style.css"><script src="/projects__grid__data.js" defer></script><script src="/projects__grid__app.js" defer></script><link rel="stylesheet" href="/portfolio-studio.css"><script defer src="/portfolio-motion.js"></script></head>
 <body><nav style="padding:12px 5%;background:#f8f6ef;color:#19382e;display:flex;gap:24px;flex-wrap:wrap;font:14px Arial"><a href="/index.html">← All projects</a><a href="https://github.com/FBELSABAH/pei-grid-forecast" target="_blank" rel="noopener">Source code ↗</a><a href="/projects__grid__decision_brief.pdf">PDF brief ↗</a></nav>
 <header><a href="#" class="brand" aria-label="PEI Grid Forecast home"><span class="brand-symbol">↗</span>PEI GRID<span class="light"> / FORECAST</span></a><span class="header-note">An independent study by Faris Elsabah</span></header>
 <main>
 <div class="intro"><div><p class="eyebrow">PRINCE EDWARD ISLAND · ELECTRICITY DEMAND</p><h1>See the next peak.<br><span>Understand the uncertainty.</span></h1><p class="lede">A day-ahead forecasting study using public PEI load readings and archived weather forecasts. Explore the evidence, then test a load-shifting scenario.</p></div><aside class="study-stamp"><span class="dot"></span> RESEARCH PROTOTYPE<p>Island-wide load, in megawatts.<br>No utility affiliation or grid control.</p><span id="snapshot-stamp"></span></aside></div>
 <!-- grid-film:start -->
-<style>
-.project-film{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,380px);gap:48px;align-items:center;margin:0 0 38px;padding:28px 36px;border:1px solid var(--line);border-radius:12px;background:#edf1e8}
-.project-film h2{font-size:32px;max-width:430px;margin-bottom:18px}
-.project-film-copy>p{font-size:14px;color:var(--muted);max-width:440px}
-.project-film .film-actions{display:flex;gap:18px;flex-wrap:wrap;margin:23px 0;font-size:12px;font-weight:600}
-.project-film figure{margin:0;min-width:0}
-.project-film video{display:block;width:100%;aspect-ratio:4/5;border-radius:8px;background:#102820;object-fit:contain}
-.project-film figcaption{font-size:10px;color:var(--muted);margin-top:10px}
-.project-film details{font-size:12px;color:var(--muted);max-width:450px;line-height:1.65}
-.project-film summary{cursor:pointer;text-decoration:underline;text-underline-offset:3px}
-.project-film details p{margin:12px 0 0}
-@media(max-width:700px){.project-film{grid-template-columns:1fr;gap:23px;padding:22px}.project-film h2{font-size:28px}.project-film figure{width:100%;max-width:380px;margin:auto}.project-film video{max-height:65vh}.project-film .film-actions{margin:18px 0}}
-@media print{.project-film{display:none}}
-</style>
-<section class="project-film" aria-labelledby="film-title">
+
+<section id="film" class="project-film" aria-labelledby="film-title">
   <div class="project-film-copy">
     <p class="eyebrow">WATCH THE PROJECT FILM · 40 SECONDS</p>
     <h2 id="film-title">Tomorrow’s demand.<br>A closer look.</h2>
