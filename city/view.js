@@ -42,7 +42,6 @@ function select(index, moveCamera = true) {
   el('counter').textContent = String(selected + 1).padStart(2, '0') + ' / ' + entries.length;
   el('open').textContent = item.action + ' ↗';
   el('open').href = item.url;
-  el('film').hidden = item.id !== 'grid';
   if (moveCamera) sceneControls?.focus(selected);
 }
 function setTour(on) {
@@ -124,12 +123,14 @@ function startScene(T,buildCity) {
     if (!frame && onscreen && !document.hidden) frame=requestAnimationFrame(render);
   }
   function overview() {
+    el('overview').hidden=true;
     focused=false; hover=-1; showCaption(null); handOrbit=false; target.set(0,1.53,0);
     goalAngle=angle+Math.atan2(Math.sin(restingAngle-angle),Math.cos(restingAngle-angle));
     goalTilt=.57; goalZoom=1; wake();
   }
   function focus(i) {
     const p=lots[i].position;showCaption(i);
+    el('overview').hidden=false;
     focused=true; hover=-1; elapsed=Math.max(elapsed,animationEnd);
     target.set(p.x*.84,Math.max(1.1,anchors[i].y*.40),p.z*.84);
     const wanted=travelAngles[i];
@@ -220,6 +221,7 @@ function startScene(T,buildCity) {
     const dx=e.clientX-dragging.x,dy=e.clientY-dragging.y;
     if(Math.hypot(dx,dy)>5) dragging.moved=true;
     if(!dragging.moved)return;
+    el('overview').hidden=false;
     setTour(false);handOrbit=true;elapsed=Math.max(elapsed,animationEnd);
     goalAngle=dragging.startAngle-dx*.008;goalTilt=Math.max(.25,Math.min(.97,dragging.startTilt+dy*.003));
     canvas.style.cursor='grabbing';wake();

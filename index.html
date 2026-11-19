@@ -10,12 +10,12 @@
   <meta property="og:image" content="https://fbelsabah.github.io/city/city-model.webp">
   <link rel="canonical" href="https://fbelsabah.github.io/">
   <link rel="icon" href="/city/mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/city/city.css">
-  <script type="module" src="/city/view.js"></script>
+  <link rel="stylesheet" href="/city/city.css?rev=2">
+  <script type="module" src="/city/view.js?rev=2"></script>
 </head>
 <body>
   <a class="skip" href="#work">Skip to project index</a>
-  <header class="mast"><a class="signature" href="/"><img src="/city/mark.svg" width="32" height="32" alt="">Faris Elsabah</a>
+  <header class="mast"><span class="signature"><img src="/city/mark.svg" width="32" height="32" alt="">Faris Elsabah</span>
     <nav aria-label="Main navigation"><a href="#work">Projects</a><a href="https://github.com/FBELSABAH">GitHub ↗</a><a href="https://www.linkedin.com/in/fariselsabah/">LinkedIn ↗</a></nav>
   </header>
   <main>
@@ -23,65 +23,53 @@
       <div class="intro"><h1 id="title">Project<br><i>City.</i></h1>
         <p>My software, data and research projects, built into a miniature city.</p>
         <button id="tour" class="tour" hidden><span aria-hidden="true">▶</span> Play tour</button>
-        <a class="index-jump" href="#work">Project index ↓</a>
       </div>
       <div class="stage-wrap">
         <div id="stage"><img class="poster" src="/city/city-model.webp" alt="A miniature city of ten architectural models connected by an elevated railway." fetchpriority="high">
           <a class="city-tag" hidden></a>
         </div>
-        <div class="tools" hidden><button id="overview">City overview</button><button id="motion" aria-label="Pause city motion" title="Pause city motion">Ⅱ</button></div>
+        <div class="tools" hidden><button id="overview" hidden>City overview</button><button id="motion" aria-label="Pause city motion" title="Pause city motion">Ⅱ</button></div>
         <span class="gesture" hidden>Drag to orbit · Select a building</span>
       </div>
       <div class="selection">
         <div class="pager" hidden><button id="prev" aria-label="Previous project">←</button><button id="next" aria-label="Next project">→</button></div>
         <span class="counter" id="counter">01 / 10</span>
         <div class="selected-copy" aria-live="polite"><h2 id="selected-name">PEI Grid Forecast</h2><p id="selected-subject">Electricity demand on PEI</p></div>
-        <div class="routes"><a id="film" href="/grid.html#film">Watch film</a><a class="open" id="open" href="/grid.html#study-views">Open dashboard ↗</a></div>
+        <a class="open" id="open" href="/grid.html#study-views">Open dashboard ↗</a>
       </div>
     </section>
     <section id="work" aria-labelledby="work-title"><h2 id="work-title">Project index</h2><ul class="directory">
         <li data-id="grid" data-action="Open dashboard" style="--swatch:#df482d">
           <a class="entry" href="/grid.html#study-views"><span class="tile" aria-hidden="true"></span><strong>PEI Grid Forecast</strong><span class="subject">Electricity demand on PEI</span><span aria-hidden="true">↗</span></a>
-          <a class="source" href="https://github.com/FBELSABAH/pei-grid-forecast" aria-label="PEI Grid Forecast source code">Code</a>
         </li>
         <li data-id="delivery" data-action="See the analysis" style="--swatch:#e3a62e">
           <a class="entry" href="/delivery.html"><span class="tile" aria-hidden="true"></span><strong>Delivery Insights</strong><span class="subject">Late deliveries in Brazilian e-commerce</span><span aria-hidden="true">↗</span></a>
-          <a class="source" href="https://github.com/FBELSABAH/delivery-insights" aria-label="Delivery Insights source code">Code</a>
         </li>
         <li data-id="coursewell" data-action="Try the demo" style="--swatch:#467ca0">
           <a class="entry" href="/coursewell.html"><span class="tile" aria-hidden="true"></span><strong>Coursewell</strong><span class="subject">Course files and deadline tracking</span><span aria-hidden="true">↗</span></a>
-          <a class="source" href="https://github.com/FBELSABAH/coursewell" aria-label="Coursewell source code">Code</a>
         </li>
         <li data-id="housing" data-action="Open dashboard" style="--swatch:#ba7766">
           <a class="entry" href="/housing.html"><span class="tile" aria-hidden="true"></span><strong>PEI Housing Pressure</strong><span class="subject">Housing supply and rents on PEI</span><span aria-hidden="true">↗</span></a>
-          <a class="source" href="https://github.com/FBELSABAH/pei-housing-pressure" aria-label="PEI Housing Pressure source code">Code</a>
         </li>
         <li data-id="immune" data-action="Explore the results" style="--swatch:#746ba3">
           <a class="entry" href="/immune.html"><span class="tile" aria-hidden="true"></span><strong>IMMUNE</strong><span class="subject">Quantum error correction</span><span aria-hidden="true">↗</span></a>
-          <a class="source" href="https://github.com/FBELSABAH/immune" aria-label="IMMUNE source code">Code</a>
         </li>
         <li data-id="cedar" data-action="Watch the replay" style="--swatch:#3f7779">
           <a class="entry" href="/cedar.html"><span class="tile" aria-hidden="true"></span><strong>Cedar KV</strong><span class="subject">A persistent key-value server in C</span><span aria-hidden="true">↗</span></a>
-          <a class="source" href="https://github.com/FBELSABAH/cedar-kv" aria-label="Cedar KV source code">Code</a>
         </li>
         <li data-id="activation" data-action="Explore the figures" style="--swatch:#b65c38">
           <a class="entry" href="/activation.html"><span class="tile" aria-hidden="true"></span><strong>Activation Gradient Flow</strong><span class="subject">How neural networks learn</span><span aria-hidden="true">↗</span></a>
-          <a class="source" href="https://github.com/MBELSABAH/activation-gradient-flow" aria-label="Activation Gradient Flow source code">Code</a>
         </li>
         <li data-id="thresholds" data-action="Explore the results" style="--swatch:#477c9e">
           <a class="entry" href="/thresholds.html"><span class="tile" aria-hidden="true"></span><strong>Treatment Thresholds</strong><span class="subject">Treatment decisions in a simulation</span><span aria-hidden="true">↗</span></a>
-          <a class="source" href="https://github.com/FBELSABAH/healthcare-treatment-threshold-simulation" aria-label="Treatment Thresholds source code">Code</a>
         </li>
         <li data-id="change" data-action="Open the course" style="--swatch:#b98553">
           <a class="entry" href="/change.html#course"><span class="tile" aria-hidden="true"></span><strong>CHANGE Program</strong><span class="subject">A six-module wellness course</span><span aria-hidden="true">↗</span></a>
-          <a class="source" href="https://github.com/FBELSABAH/Change-program-design-sample" aria-label="CHANGE Program source code">Code</a>
         </li>
         <li data-id="iris" data-action="Read the findings" style="--swatch:#60805e">
           <a class="entry" href="/iris.html"><span class="tile" aria-hidden="true"></span><strong>Iris Regression</strong><span class="subject">Predicting sepal length in R</span><span aria-hidden="true">↗</span></a>
-          <a class="source" href="https://github.com/FBELSABAH/Modeling-Sepal-Length-in-Iris-Flowers-Using-Multiple-Linear-Regression" aria-label="Iris Regression source code">Code</a>
         </li>
       </ul></section>
   </main>
-  <footer><span>Faris Elsabah</span><a href="#title">Back to city ↑</a></footer>
 </body>
 </html>

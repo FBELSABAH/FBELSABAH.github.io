@@ -19,16 +19,13 @@ main.shell { max-width: 1376px; padding-inline: clamp(16px,4vw,60px); }
   padding: clamp(20px, 3.5vw, 54px); margin: 0 0 36px;
   border-radius: 4px; background: #292b27; color: #fcf8ee;
 }
-.project-film .eyebrow { color: #edc69f; }
 .project-film h2 { max-width: 13em; font-size: clamp(32px, 4vw, 61px); letter-spacing: -.055em; line-height: 1.03; margin-bottom: 22px; }
-.project-film-copy > p:not(.eyebrow), .project-film details, .project-film figcaption { color: #d9d6ce; }
+.project-film-copy > p, .project-film details { color: #d9d6ce; }
 .project-film-copy > p { max-width: 49ch; }
-.project-film .film-actions { display: flex; flex-wrap: wrap; gap: 12px 24px; margin: 23px 0; }
-.project-film a, .project-film summary { color: #ffce9c; font-size: 14px; cursor: pointer; }
+.project-film summary { color: #ffce9c; font-size: 14px; cursor: pointer; }
 .project-film details p { margin: 10px 0 0; font-size: 14px; }
 .project-film figure { justify-self: center; width: min(100%, 380px, 52vh); margin: 0; }
 .project-film video { display: block; width: 100%; height: auto; aspect-ratio: 4/5; object-fit: contain; border-radius: 12px; background: #0a1b16; }
-.project-film figcaption { margin-top: 10px; font-size: 12px; line-height: 1.45; }
 .video-frame:has(.video-player) { background: none; padding: 0; display: block; min-height: 0; border-radius: 0; }
 .video-frame:has(.video-player)::before { content: none; }
 .video-frame .video-player { display: block; width: 100%; height: auto; border: 0; border-radius: 12px; box-shadow: none; }

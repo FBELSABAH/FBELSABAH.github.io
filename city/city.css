@@ -7,11 +7,11 @@ button { font:inherit; color:inherit; cursor:pointer; }
 button:focus-visible,a:focus-visible,canvas:focus-visible { outline:3px solid #ab462d; outline-offset:4px; }
 .skip { position:absolute; top:-70px; z-index:9; background:white; padding:12px; }
 .skip:focus { top:4px; }
-.mast,main,footer { width:min(1660px,100%); margin:auto; padding-inline:clamp(18px,4vw,75px); }
+.mast,main { width:min(1660px,100%); margin:auto; padding-inline:clamp(18px,4vw,75px); }
 .mast { display:flex; justify-content:space-between; align-items:center; height:76px; gap:16px; }
 .mast .signature { display:flex; gap:10px; align-items:center; font-weight:720; font-size:18px; letter-spacing:-.055em; }
 .mast nav { display:flex; gap:clamp(12px,2.3vw,38px); font-size:14px; }
-.mast nav a:hover,.index-jump:hover,.source:hover,#film:hover,footer a:hover { text-decoration:underline; text-underline-offset:4px; }
+.mast nav a:hover { color:var(--red); }
 .exhibit { display:grid; grid-template-columns:29% minmax(0,1fr); position:relative; border-top:1px solid var(--rule); }
 .intro { align-self:center; position:relative; z-index:1; padding:26px 0 36px; }
 h1,h2,p { margin:0; }
@@ -22,7 +22,7 @@ h1 i { font-family:Georgia,"Times New Roman",serif; font-weight:400; letter-spac
 .tour:hover,.open:hover { background:#494b40; }
 .tour { white-space:nowrap; }
 .tour span { font-size:11px; }
-.index-jump { display:inline-flex; align-items:center; min-height:44px; font-size:13px; margin:0 12px; }
+
 .stage-wrap { position:relative; min-width:0; height:clamp(430px,64svh,740px); }
 #stage { position:absolute; inset:0 -2vw 0 -3vw; }
 .poster, #stage canvas { width:100%; height:100%; display:block; }
@@ -41,7 +41,7 @@ h1 i { font-family:Georgia,"Times New Roman",serif; font-weight:400; letter-spac
 .counter { font:12px ui-monospace,monospace; color:var(--muted); white-space:nowrap; }
 .selected-copy h2 { font-size:clamp(21px,2.2vw,36px); line-height:1.15; letter-spacing:-.055em; font-weight:595; }
 .selected-copy p { margin-top:3px; color:var(--muted); font-size:14px; }
-.routes { margin-left:auto; display:flex; align-items:center; gap:20px; font-size:13px; }
+.selection .open { margin-left:auto; }
 #work { padding:clamp(38px,7vw,100px) 0; scroll-margin-top:15px; }
 #work h2 { font-size:clamp(36px,4.8vw,78px); letter-spacing:-.075em; font-weight:550; margin:0 0 24px; }
 .directory { padding:0; margin:0; list-style:none; border-top:1px solid var(--rule); }
@@ -49,10 +49,10 @@ h1 i { font-family:Georgia,"Times New Roman",serif; font-weight:400; letter-spac
 .entry { flex:1; min-width:0; display:grid; grid-template-columns:12px minmax(180px,.8fr) 1fr auto; align-items:center; gap:clamp(12px,2vw,34px); padding:20px 0; }
 .entry strong { font-size:clamp(19px,2vw,31px); font-weight:550; letter-spacing:-.045em; }
 .tile { width:10px; height:10px; background:var(--swatch); }
-.subject,.source { color:var(--muted); font-size:14px; }
+.subject { color:var(--muted); font-size:14px; }
 .entry:hover strong { color:var(--red); }
-.source { padding:15px 4px; text-decoration:underline; text-underline-offset:4px; }
-footer { display:flex; justify-content:space-between; padding-block:0 32px; color:var(--muted); font-size:14px; }
+
+
 @media(max-width:780px) {
   .mast { height:59px; }
   .mast nav { font-size:12px; }
@@ -62,7 +62,7 @@ footer { display:flex; justify-content:space-between; padding-block:0 32px; colo
   h1 br { display:none; }
   h1 i { margin-left:.13em; }
   .intro p { grid-column:1/-1; grid-row:2; margin:12px 0 0; max-width:47ch; font-size:14px; }
-  .intro .index-jump { display:none; }
+
   .tour { padding:10px 12px; }
   .stage-wrap { height:clamp(290px,72vw,475px); }
   #stage { inset:0 -12px; }
@@ -74,7 +74,7 @@ footer { display:flex; justify-content:space-between; padding-block:0 32px; colo
   .selected-copy { grid-row:1; grid-column:2; }
   .pager { grid-row:1; grid-column:3; }
   .pager button { min-width:32px; padding:0 7px; }
-  .routes { grid-column:2/-1; flex-direction:row-reverse; justify-content:flex-end; margin:0; gap:15px; }
+  .selection .open { grid-column:2/-1; justify-self:start; margin:0; }
   .selected-copy p { font-size:13px; }
   .entry { grid-template-columns:10px 1fr auto; gap:4px 12px; padding:16px 0; }
   .entry .subject { grid-column:2; grid-row:2; font-size:13px; }
@@ -86,7 +86,7 @@ footer { display:flex; justify-content:space-between; padding-block:0 32px; colo
   .mast nav { gap:9px; }
   .counter { display:none; }
   .selection { grid-template-columns:1fr auto; }
-  .selected-copy,.routes { grid-column:1; }
+  .selected-copy,.selection .open { grid-column:1; }
   .pager { grid-column:2; }
 }
 @media(prefers-reduced-motion:no-preference) {
